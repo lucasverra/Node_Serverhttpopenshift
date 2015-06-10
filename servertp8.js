@@ -53,7 +53,7 @@ var server = http.createServer(function(request, response) {
     } // aca cierra el else groso
 });
 
-server.listen(8000, function() {
-   console.log('estoy escuchando en el 8000');
-   ;
+
+server.listen(process.env.OPENSHIFT_NODEJS_PORT, process.env.OPENSHIFT_NODEJS_IP, function() {
+    console.log('ahora si estoy escuchando');
 });
